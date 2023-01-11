@@ -1,3 +1,4 @@
+import pyautogui
 from fastapi import FastAPI, WebSocket
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
@@ -16,4 +17,18 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     while True:
         data = await websocket.receive_json()
-        print(data)
+        event = data["event"]
+        match event:
+            case "mouse-left":
+                pyautogui.leftClick()
+            case "mouse-right":
+                pyautogui.rightClick()
+            case "mouse-move":
+                # position {x, y} (relative)
+                x = data["position"]["x"]
+                y = data["position"]["y"]
+
+                pyautogui.moveRel(x,y)
+            case "keys":
+                print("keys")
+
