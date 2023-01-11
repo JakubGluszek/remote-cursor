@@ -11,3 +11,5 @@ python3-tk python3-dev
 ## Todo
 
 - [ ] Keyboard support
+- [ ] Dockerize
+- [ ] ? Migrate to golang for performance benefits, since it works poorly right now
