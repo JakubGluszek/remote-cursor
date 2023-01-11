@@ -1,6 +1,6 @@
 # Remote cursor
 
-A quick little server to move navigate the screen
+A quick little server to navigate the screen
 primarily by the use of one's phone.
 
 ## Requirements
