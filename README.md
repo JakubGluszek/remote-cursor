@@ -13,3 +13,8 @@ python3-tk python3-dev
 - [ ] Keyboard support
 - [ ] Dockerize
 - [ ] ? Migrate to golang for performance benefits, since it works poorly right now
+
+## Future resources
+
+<https://github.com/go-vgo/robotgo>
+<https://github.com/googollee/go-socket.io>
